@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scan Report -- scanme.nmap.org</title>
+  <style>
+    body  { font-family:'Segoe UI',Arial,sans-serif; background:#f4f6f9; color:#333; margin:0; padding:24px; }
+    h1    { color:#2E75B6; margin-bottom:4px; }
+    .meta { color:#666; margin-bottom:18px; font-size:13px; }
+    .summary { display:flex; gap:32px; background:#fff; border-radius:6px;
+                padding:14px 20px; margin-bottom:20px;
+                box-shadow:0 1px 4px rgba(0,0,0,.08); }
+    .stat-num   { font-size:26px; font-weight:bold; color:#2E75B6; }
+    .stat-label { font-size:11px; color:#888; }
+    table { width:100%; border-collapse:collapse; background:#fff;
+             box-shadow:0 1px 4px rgba(0,0,0,.08); border-radius:4px; overflow:hidden; }
+    th    { background:#2E75B6; color:#fff; padding:10px 12px; text-align:left; font-size:13px; }
+    td    { padding:8px 12px; border-bottom:1px solid #e8e8e8; font-size:12px; }
+    tr:hover { background:#f0f7ff; }
+    .s-open  { color:#27ae60; font-weight:bold; }
+    .banner  { font-family:monospace; font-size:11px; word-break:break-all; max-width:280px; }
+  </style>
+</head>
+<body>
+  <h1>Port Scan Report</h1>
+  <div class="meta">Target: <strong>scanme.nmap.org</strong> &nbsp;|&nbsp; Generated: 2026-03-14 00:08:07</div>
+  <div class="summary">
+    <div><div class="stat-num">2</div><div class="stat-label">Open Ports</div></div>
+    <div><div class="stat-num">2</div><div class="stat-label">Unique Services</div></div>
+    <div><div class="stat-num">2</div><div class="stat-label">Banners Grabbed</div></div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th><th>Host</th><th>IP</th><th>Port</th>
+        <th>State</th><th>Service</th><th>Banner</th><th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td>2026-03-14 00:08:01</td><td>scanme.nmap.org</td><td>45.33.32.156</td><td>22</td><td class='s-open'>open</td><td>ssh</td><td class='banner'>SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13</td><td></td></tr>
+<tr><td>2026-03-14 00:08:01</td><td>scanme.nmap.org</td><td>45.33.32.156</td><td>80</td><td class='s-open'>open</td><td>http</td><td class='banner'>HTTP/1.1 200 OK</td><td></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
