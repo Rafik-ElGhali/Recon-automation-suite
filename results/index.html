@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recon Automation Suite — Results</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 40px 24px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #58a6ff;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 10px;
+      color: #8b949e;
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin: 6px 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 28px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card-header {
+      background: #1f2937;
+      color: #58a6ff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 18px;
+      border-bottom: 1px solid #30363d;
+      letter-spacing: 0.5px;
+    }
+    .desc {
+      padding: 12px 18px;
+      font-size: 0.85rem;
+      color: #8b949e;
+      line-height: 1.6;
+      border-bottom: 1px solid #21262d;
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      color: #484f58;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recon Automation Suite</h1>
+    <p>Network reconnaissance toolkit — automated scanning, banner grabbing, and OSINT</p>
+    <div style="margin-top:16px">
+      <span class="badge">Python 3</span>
+      <span class="badge">socket</span>
+      <span class="badge">python-nmap</span>
+      <span class="badge">Shodan API</span>
+      <span class="badge">ThreadPoolExecutor</span>
+      <span class="badge">tqdm</span>
+      <span class="badge">argparse</span>
+      <span class="badge">Target: scanme.nmap.org</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">Port Scanner</div>
+      <p class="desc">TCP port scanning using Python's socket library. Scans ports 20–1024, detects open ports with 1s timeout per port.</p>
+      <img src="port_scanner.png" alt="Port Scanner output">
+    </div>
+    <div class="card">
+      <div class="card-header">Banner Grabbing</div>
+      <p class="desc">Extends the port scanner to capture raw service banners — SSH version strings, HTTP headers, FTP greetings.</p>
+      <img src="banner_grabbing.png" alt="Banner Grabbing output">
+    </div>
+    <div class="card">
+      <div class="card-header">Nmap Service Scanner</div>
+      <p class="desc">python-nmap wrapper for deep service and version detection. Parses Nmap XML output into structured Python dicts.</p>
+      <img src="nmap_scanner.png" alt="Nmap Service Scanner output">
+    </div>
+    <div class="card">
+      <div class="card-header">Shodan OSINT Lookup</div>
+      <p class="desc">Passive reconnaissance via the Shodan API. Retrieves organisation, OS, country, open ports, and raw banners without touching the target.</p>
+      <img src="shodan_lookup.png" alt="Shodan OSINT Lookup output">
+    </div>
+    <div class="card">
+      <div class="card-header">Full Combined Scanner</div>
+      <p class="desc">Multi-threaded scanner combining all tools. 200 threads, tqdm progress bar, CLI arguments, CSV export and HTML report generation.</p>
+      <img src="full_scanner.png" alt="Full Combined Scanner output">
+    </div>
+  </div>
+
+  <footer>
+    All scans performed on scanme.nmap.org — publicly authorized test target maintained by the Nmap project.
+  </footer>
+</body>
+</html>
